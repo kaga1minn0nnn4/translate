@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta name=”viewport” content=”width=device-width,initial-scale=1″ charset="utf-8"/>
+	<title>translateform</title>
+</head>
+
+<body>
+	<style>
+		.Japanese{
+			width:100%;
+			height: 30vh;
+		}
+	</style>
+	<h1> コンピュータ・ネットワーク II テストページ </h1>
+	<form action="" method="POST">{% csrf_token %}
+		<p>日本文</p>
+		<textarea class="Japanese" name="Japanese">{{ sentence.ja_str }}</textarea>
+		<div align="center" class="example">
+		<INPUT type="submit" value="翻訳">
+		</div>
+		<p>英文<br>
+		<p>
+			{{ sentence.en_str }}
+		</p>
+		<br/>
+		<p>単語数</p>
+		<p>
+			{{ sentence.en_count }}
+		</p>
+	</form>
+
+</body>
+</html>
