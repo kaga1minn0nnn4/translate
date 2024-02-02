@@ -6,7 +6,7 @@ from .controller import word_analysis, ja2en
 
 def translate(request):
     params = {}
-    if request.method == "POST":
+    if request.POST.get("Japanese", None):
         sentence = Sentence()
 
         sentence.ja_str = request.POST["Japanese"]
