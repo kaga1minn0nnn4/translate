@@ -8,3 +8,4 @@ class Sentence(models.Model):
     ja_str = models.TextField()
     en_str = models.TextField()
     en_count = models.BigIntegerField()
+    analysis_words = models.TextField()
